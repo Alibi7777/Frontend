@@ -1,0 +1,165 @@
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Electronics Shop - Home</title>
+  <!-- Bootstrap CSS -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+  <!-- Your custom styles -->
+  <!-- <link rel="stylesheet" href="style/index.css" /> -->
+</head>
+<header class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="index.html">Electronics Shop</a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a
+            class="nav-link active text-decoration-underline text-warning"
+            aria-current="page"
+            href="index.html"
+            >Home</a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="cart.html">Cart</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="favourites.html">Favourites</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html">Contact Us</a>
+        </li>
+      </ul>
+    </div>
+    <a href="login.html" class="btn btn-warning">Login</a>
+  </div>
+</header>
+
+<main class="container mt-4">
+  <div class="row">
+    <!-- Sidebar (Category Menu) -->
+    <aside class="col-lg-3 mb-4">
+      <div class="bg-light p-3 rounded">
+        <ul class="list-unstyled">
+          <li class="mb-2">Phone</li>
+          <li class="mb-2">Computer Systems</li>
+          <li class="mb-2">Computer Peripherals</li>
+          <li class="mb-2">TV</li>
+          <li>VR</li>
+        </ul>
+      </div>
+    </aside>
+
+    <!-- Main Content (Products) -->
+    <div class="col-lg-9">
+      <!-- Promo Banner -->
+      <div class="promo-banner bg-warning text-center p-3 rounded mb-4">
+        <h2>Performance Boost - Save Up to 55%</h2>
+        <blockquote>
+          "An unbeatable deal! Boost your PC's performance at an incredible
+          discount of up to 55%. Don't miss this limited-time offer."
+        </blockquote>
+      </div>
+
+      <!-- Products -->
+      <div class="row">
+        <div class="col-lg-4 mb-4">
+          <div class="card h-100">
+            <img
+              src="pictures/combo-deal.png"
+              class="card-img-top"
+              alt="Combo Deal Image"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Combo Deal - Save $125.00</h5>
+              <p class="card-text">
+                Intel Core i7 + Corsair Vengeance RAM + ASUS ROG Strix Z690
+              </p>
+              <p class="card-text">Price: $427.97</p>
+              <a href="cart.html" class="btn btn-primary">Add to Cart</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 mb-4">
+          <div class="card h-100">
+            <img
+              src="pictures/desktop-computer-image.png"
+              class="card-img-top"
+              alt="Desktop Computers Image"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Desktop Computers - Save $30.00</h5>
+              <p class="card-text">
+                ABS Gaming PC + Acer Monitor + Razer Headset
+              </p>
+              <p class="card-text">Price: $2,489.97</p>
+              <a href="cart.html" class="btn btn-primary">Add to Cart</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 mb-4">
+          <div class="card h-100">
+            <img
+              src="pictures/phone1.png"
+              class="card-img-top"
+              alt="Google Pixel 9"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Google Pixel 9</h5>
+              <p class="card-text">Price: $579 <del>$979</del></p>
+              <a href="cart.html" class="btn btn-primary">Add to Cart</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Promo Banner -->
+      <div class="promo-banner bg-warning text-center p-3 rounded">
+        <h2>ASUS NUC Configurator - Check it Now</h2>
+      </div>
+    </div>
+  </div>
+</main>
+<footer class="bg-dark text-white py-4">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4">
+        <h5>Electronics</h5>
+      </div>
+      <div class="col-lg-4">
+        <h5>Pages</h5>
+        <ul class="list-unstyled">
+          <li>Cart</li>
+          <li>Contact Us</li>
+        </ul>
+      </div>
+      <div class="col-lg-4">
+        <h5>Creators</h5>
+        <ul class="list-unstyled">
+          <li>Ospan A.</li>
+          <li>Sanakov Y.</li>
+          <li>Zharasuly M.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="text-center mt-3">
+      <p>&copy; 2024 Electronics Shop</p>
+    </div>
+  </div>
+</footer>
