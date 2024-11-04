@@ -53,9 +53,9 @@ function displayFAQs() {
 document.addEventListener("DOMContentLoaded", displayFAQs);
 // Play sound when an FAQ item is clicked
 function playClickSound() {
-  const audio = new Audio("sound/click-sound.wav"); // Add your sound file path
+  const audio = new Audio("sound/click-sound.wav");
   audio.play();
-}
+    }
 
 // Attach playClickSound to FAQ click events
 document.addEventListener("DOMContentLoaded", function () {
@@ -101,6 +101,32 @@ document.addEventListener("DOMContentLoaded", function () {
 
       // Smooth transition effect for opacity
       answer.style.transition = "opacity 0.3s ease";
+    });
+  });
+});
+document.addEventListener("DOMContentLoaded", function () {
+  const faqQuestions = document.querySelectorAll(".faq-question");
+
+  faqQuestions.forEach((question) => {
+    question.addEventListener("click", function () {
+      const answer = this.nextElementSibling;
+
+      if (answer.classList.contains("open")) {
+        // If it is open, close it
+        answer.classList.remove("open");
+        answer.style.maxHeight = null;
+      } else {
+        // Close all other answers
+        const allAnswers = document.querySelectorAll(".faq-answer");
+        allAnswers.forEach((ans) => {
+          ans.classList.remove("open");
+          ans.style.maxHeight = null;
+        });
+
+        // Open the clicked answer
+        answer.classList.add("open");
+        answer.style.maxHeight = answer.scrollHeight + "px";
+      }
     });
   });
 });

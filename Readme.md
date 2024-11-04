@@ -39,10 +39,30 @@ The project is a website for an Electronics Shop, where users can browse frequen
 8. Animations and Transitions:
    - The website uses smooth transitions and animations for various elements, such as hovering effects on buttons and expanding/collapsing FAQ answers.
 
-### How User Preferences Are Managed
+Electronics Shop Project
 
-- Language Selection: The language preference is managed through the JavaScript language-switcher.js script. The selected language is applied across the website, and user interactions (such as selecting a different language) update the content dynamically.
-- Interactive FAQ Display: The state of the FAQ (expanded or collapsed) is managed using JavaScript event listeners. The content is shown or hidden based on user clicks, providing a personalized browsing experience.
-- Form Validations: User inputs in forms are validated using JavaScript to ensure correct data is submitted. This improves the quality of user interactions and helps prevent errors.
+Project Description
 
-In summary, the project combines front-end technologies to create an interactive and user-friendly website, with a focus on dynamic content rendering, user preference management, and responsive design.
+The Electronics Shop project is a web-based application designed to provide users with a seamless shopping experience. The platform includes a variety of key features such as user authentication, light/dark mode preference, and filtering options for products. This project aims to deliver an interactive and user-friendly interface for browsing, purchasing, and managing products.
+
+Key Features
+
+1. User Authentication: Login and Logout
+
+User Login and Logout: Users can securely log in and log out of their accounts. This feature includes form validation for email and password.
+
+Session Management: User information, such as username and session details, are stored in localStorage to maintain the session state across page reloads.
+
+Persistent Login: When a user logs in, their session is saved in localStorage, allowing them to remain logged in even after refreshing or reopening the browser.
+
+2. User Preferences
+
+Light/Dark Mode: Users can toggle between light and dark modes for a personalized viewing experience. The selected mode is stored in localStorage, so the preference persists across sessions.
+
+Theme Persistence: The application checks localStorage on page load and applies the saved theme to ensure a consistent user experience.
+
+3. Filtering Results
+
+Product Filtering: Users can filter products by categories (e.g., "Category 1", "Category 2").
+
+Filter State Persistence: The selected filter settings are saved in localStorage to reapply the chosen filter when the user returns to the page.

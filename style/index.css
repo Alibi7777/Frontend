@@ -30,8 +30,11 @@ nav {
   text-align: center;
 }
 
+header a,
+header h1 {
+  color: white !important;
+}
 nav a {
-  color: white;
   text-decoration: none;
   margin: 0 15px;
   font-weight: bold;
@@ -278,6 +281,13 @@ footer {
   background-color: #e68900;
 }
 
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f0f5;
+  color: #333; /* Ensures text is visible in light mode */
+}
 .background-color-section {
   text-align: center;
   margin: 30px 0;
@@ -311,4 +321,154 @@ footer {
 
 #open-popup {
   cursor: pointer;
+}
+body.dark-mode {
+  background-color: #333;
+  color: #fff;
+}
+
+body.dark-mode .category-menu {
+  background-color: #444;
+}
+
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4,
+body.dark-mode p,
+body.dark-mode a,
+body.dark-mode label {
+  color: black;
+}
+
+body.dark-mode .main-header {
+  color: black !important;
+}
+
+body.dark-mode .add-to-cart-button,
+body.dark-mode .add-to-favourites-button {
+  background-color: #ff9800;
+  color: #333;
+}
+
+body.dark-mode .promo-banner {
+  background-color: #555;
+  color: #fff;
+}
+
+.hamburger {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  display: none; /* Hidden by default */
+}
+
+@media (max-width: 428px) {
+  .hamburger {
+    display: block; /* Show the button on smaller screens */
+  }
+
+  .nav-menu {
+    display: none; /* Hidden by default on small screens */
+    flex-direction: column;
+    position: absolute;
+    top: 60px; /* Adjust based on header height */
+    left: 0;
+    width: 92.5%;
+    background-color: #1e2a38;
+    padding: 10px;
+    z-index: 1000;
+  }
+
+  .nav-menu.active {
+    display: flex; /* Show when the menu is active */
+  }
+
+  .nav-menu a {
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  main {
+    flex-direction: column;
+  }
+
+  .featured-products {
+    margin-left: 0;
+  }
+
+  .category-menu {
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .current-date-time {
+    position: relative;
+    top: 0;
+    right: 0;
+    margin-top: 10px;
+  }
+
+  .product-image {
+    max-width: 200px;
+    min-width: 200px;
+  }
+
+  nav {
+    margin-top: 10px;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+@media (max-width: 576px) {
+  .login-button {
+    padding: 8px 16px;
+    font-size: 12px;
+  }
+
+  .product-details h3,
+  .product-details h4 {
+    font-size: 16px;
+  }
+
+  .add-to-cart-button,
+  .add-to-favourites-button {
+    font-size: 12px;
+  }
+
+  .category-menu {
+    padding: 10px;
+  }
+
+  .promo-banner {
+    padding: 10px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 425px) {
+  .product-card {
+    flex-direction: column;
+  }
+
+  .product-image {
+    max-width: unset;
+    width: 100%;
+    /* height: 200px; */
+  }
 }

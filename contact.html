@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact Us - Electronics Shop</title>
     <link rel="stylesheet" href="style/contact.css" />
+    <script defer src="js/contact.js"></script>
   </head>
   <body>
     <header>
@@ -21,7 +22,7 @@
     <main>
       <section class="contact-form">
         <h2>We'd Love to Hear From You</h2>
-        <form action="submit-contact.php" method="POST">
+        <form id="contact-form">
           <label for="name">Full Name</label>
           <input type="text" id="name" name="name" required />
 
@@ -31,8 +32,19 @@
           <label for="message">Message</label>
           <textarea id="message" name="message" rows="5" required></textarea>
 
-          <button type="submit">Send Message</button>
+          <div style="display: flex">
+            <button id="main_button" type="button">Send Message</button>
+            <button
+              id="reset_button"
+              type="button"
+              style="background-color: #fe3838"
+            >
+              Reset button
+            </button>
+          </div>
         </form>
+
+        <div id="feedback"></div>
       </section>
     </main>
 

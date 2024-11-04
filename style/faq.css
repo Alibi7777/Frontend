@@ -12,6 +12,18 @@
   color: #1e2a38;
   text-align: center;
 }
+/* Default (Day) Theme */
+body {
+  background-color: #f0f0f5;
+  color: #333;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Night Theme */
+body.night-mode {
+  background-color: #1e1e1e;
+  color: #f0f0f5;
+}
 
 /* FAQ Question Styling */
 .faq-question {
@@ -42,6 +54,24 @@
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   display: none; /* Initially hidden */
+}
+
+/* Header and Footer Styles for Night Theme */
+header.night-mode,
+footer.night-mode {
+  background-color: #333;
+  color: #f0f0f5;
+}
+
+/* FAQ Section Styles for Night Theme */
+.faq-section.night-mode .faq-question {
+  background-color: #444;
+  color: #f0f0f5;
+}
+
+.faq-section.night-mode .faq-answer {
+  background-color: #555;
+  color: #f0f0f5;
 }
 
 /* Footer Styling */
@@ -96,4 +126,42 @@ footer {
 .faq-answer {
   opacity: 0;
   transition: opacity 0.3s ease;
+}
+/* FAQ Answer Styling */
+.faq-answer {
+  background-color: #ffffff;
+  color: #333;
+  padding: 20px;
+  margin: 0 0 20px 0;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  max-height: 0; /* Initially collapsed */
+  transition: max-height 0.3s ease-out; /* Smooth expansion and collapse */
+}
+
+/* Open state for FAQ answer */
+.faq-answer.open {
+  max-height: 500px; /* Arbitrary large value for expansion */
+}
+/* Styling for the FAQ search bar */
+.faq-search {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+/* FAQ Answer Animation */
+.faq-answer {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease, opacity 0.3s ease;
+}
+
+.faq-answer.show {
+  opacity: 1;
+  max-height: 100px;
 }

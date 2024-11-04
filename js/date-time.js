@@ -25,4 +25,3 @@ document.addEventListener("DOMContentLoaded", function () {
   document.getElementById("date").textContent = date;
   document.getElementById("time").textContent = time;
 });
-  

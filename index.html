@@ -8,23 +8,44 @@
     <script defer src="js/popup.js"></script>
     <script defer src="js/background-color.js"></script>
     <script defer src="js/date-time.js"></script>
+    <script defer src="js/theme.js"></script>
+    <script defer src="js/filter.js"></script>
+    <script defer src="js/menu-toggle.js"></script>
   </head>
   <body>
     <header>
       <a href="index.html"><h1>Electronics Shop</h1></a>
-      <nav>
+      <nav id="nav-menu" class="nav-menu">
         <a href="index.html" class="active">Home</a>
         <a href="cart.html">Cart</a>
         <a href="favourites.html">Favourites</a>
         <a href="faq.html">Faq</a>
         <a href="contact.html">Contact Us</a>
       </nav>
+      <button id="hamburger-menu" class="hamburger">&#9776;</button>
+      <select id="filter-options">
+        <option value="all">All</option>
+        <option value="category1">Category 1</option>
+        <option value="category2">Category 2</option>
+      </select>
+      <button
+        id="theme-toggle"
+        style="background-color: transparent; border: none"
+      >
+        <img
+          id="theme-icon"
+          src="pictures/moon-svgrepo-com.svg"
+          alt="Toggle Theme"
+          style="max-width: 24px; max-height: 24px"
+        />
+      </button>
+
       <a href="login.html" class="login-button">Login</a>
 
-      <div class="current-date-time">
+      <!-- <div class="current-date-time">
         <p id="date"></p>
         <p id="time"></p>
-      </div>
+      </div> -->
     </header>
 
     <main>
@@ -54,9 +75,11 @@
             <img src="pictures/combo-deal.png" alt="Combo Deal Image" />
           </div>
           <div class="product-details">
-            <h3>Combo Deal - Save $125.00</h3>
-            <p>Intel Core i7 + Corsair Vengeance RAM + ASUS ROG Strix Z690</p>
-            <p>Price: $427.97</p>
+            <h4 class="main-header">Combo Deal - Save $125.00</h4>
+            <p class="main-header">
+              Intel Core i7 + Corsair Vengeance RAM + ASUS ROG Strix Z690
+            </p>
+            <p class="main-header">Price: $427.97</p>
             <a href="cart.html" class="add-to-cart-button">Add to Cart</a>
             <br /><br />
             <a href="favourites.html" class="add-to-favourites-button"
@@ -73,9 +96,11 @@
             />
           </div>
           <div class="product-details">
-            <h4>Desktop Computers - Save $30.00</h4>
-            <p>ABS Gaming PC + Acer Monitor + Razer Headset</p>
-            <p>Price: $2,489.97</p>
+            <h4 class="main-header">Desktop Computers - Save $30.00</h4>
+            <p class="main-header">
+              ABS Gaming PC + Acer Monitor + Razer Headset
+            </p>
+            <p class="main-header">Price: $2,489.97</p>
             <a href="cart.html" class="add-to-cart-button">Add to Cart</a>
             <br /><br />
             <a href="favourites.html" class="add-to-favourites-button"
@@ -89,8 +114,10 @@
             <img src="pictures/phone1.png" alt="Google Pixel 9" />
           </div>
           <div class="product-details">
-            <h4>Google Pixel 9</h4>
-            <h3>Price: <strong>$579</strong> <del>$979</del></h3>
+            <h4 class="main-header">Google Pixel 9</h4>
+            <h3 class="main-header">
+              Price: <strong>$579</strong> <del>$979</del>
+            </h3>
             <a href="cart.html" class="add-to-cart-button">Add to Cart</a>
             <br /><br />
             <a href="favourites.html" class="add-to-favourites-button"

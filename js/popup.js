@@ -21,6 +21,3 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
- 
-let x = null;
-let y;
