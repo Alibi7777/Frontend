@@ -17,6 +17,17 @@ header {
   justify-content: space-between;
   align-items: center;
   color: white;
+  animation: slideDown 0.5s ease-out forwards;
+  transform: translateY(-100%);
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
 }
 
 header h1 {
@@ -69,6 +80,43 @@ nav a.active {
   background-color: #00253d;
 
   /* background-color: #0056b3; */
+}
+
+.product-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.7s ease forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.product-image {
+  width: 100%;
+  max-width: 180px;
+  max-height: 180px;
+  height: auto;
+  margin-bottom: 10px;
+  transition: transform 0.3s ease;
+}
+
+.product-image:hover {
+  transform: scale(1.1);
 }
 
 /* Center the aside section aside(changed)*/
@@ -592,7 +640,7 @@ body.dark-mode .promo-banner {
     position: absolute;
     top: 60px; /* Adjust based on header height */
     left: 0;
-    width: 92.5%;
+    width: 100%;
     background-color: #007acc;
     padding: 10px;
     z-index: 1000;

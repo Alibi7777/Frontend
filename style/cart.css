@@ -50,6 +50,7 @@ nav a.active {
   border-bottom: 3px solid #d08e32;
   color: #d08e32;
 }
+
 .login-button {
   background-color: #115b8c;
   color: white;
@@ -84,11 +85,22 @@ nav a.active {
   font-size: 24px;
 }
 
+/* Slide-in animation for cart products */
 .cart-product {
   display: flex;
   justify-content: space-between;
   padding: 15px 0;
   border-bottom: 1px solid #ccc;
+  opacity: 0;
+  transform: translateX(-50px);
+  animation: slideIn 0.5s ease forwards;
+}
+
+@keyframes slideIn {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 .product-image img {
@@ -115,9 +127,18 @@ nav a.active {
   font-weight: bold;
 }
 
+/* Fade-in animation for checkout section */
 .checkout-section {
   margin-top: 20px;
   text-align: right;
+  opacity: 0;
+  animation: fadeIn 0.5s ease forwards 0.5s;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
 }
 
 .checkout-section p {
@@ -132,10 +153,23 @@ nav a.active {
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .checkout-btn:hover {
   background-color: #0056b3;
+}
+
+/* Hover scale effect for delete button */
+.delete-btn {
+  cursor: pointer;
+  width: 24px; /* Adjust size as needed */
+  height: 24px;
+  transition: transform 0.3s ease;
+}
+
+.delete-btn:hover {
+  transform: scale(1.1); /* Slight zoom on hover */
 }
 
 footer {

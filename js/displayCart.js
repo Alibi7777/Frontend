@@ -27,11 +27,11 @@ document.addEventListener("DOMContentLoaded", () => {
         </div>
         <div class="product-details">
           <h3>${item.name}</h3>
-          <p>${item.description}</p>
+          <p>${item.description}</p>    
           <p>Price: $${item.price.toFixed(2)}</p>
-          <button class="delete-btn" data-index="${index}">Remove</button>
+          <img src="pictures/delete.svg" alt="Remove" class="delete-btn" data-index="${index}" />
         </div>
-      </div>
+      </div>    
     `;
     cartContainer.insertAdjacentHTML("beforeend", productHTML);
     total += item.price;
