@@ -1,7 +1,12 @@
 document.addEventListener("DOMContentLoaded", () => {
   const loginForm = document.getElementById("loginForm");
-  const emailInput = document.getElementById("email");
-  const passwordInput = document.getElementById("password");
+  let emailInput;
+  let passwordInput;
+  if (loginForm) {
+    emailInput = loginForm.querySelector("#email");
+    passwordInput = loginForm.querySelector("#password");
+  }
+
   const loginButton = document.querySelector(".login-button");
 
   // Check if a user is already logged in and update the header
@@ -15,6 +20,10 @@ document.addEventListener("DOMContentLoaded", () => {
       event.preventDefault(); // Prevent the default form submission
 
       const storedUsers = JSON.parse(localStorage.getItem("users")) || [];
+      console.log(storedUsers);
+      console.log(emailInput.value);
+      console.log(passwordInput.value);
+
       const user = storedUsers.find(
         (u) =>
           u.email === emailInput.value && u.password === passwordInput.value
@@ -33,7 +42,6 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function displayUserProfile(userName) {
-    // Replace the login button with the user's name
     if (loginButton) {
       loginButton.textContent = userName;
       loginButton.style.cursor = "pointer";

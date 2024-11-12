@@ -6,6 +6,7 @@
     <title>Contact Us - Electronics Shop</title>
     <link rel="stylesheet" href="style/contact.css" />
     <script defer src="js/contact.js"></script>
+    <script defer src="js/auth.js"></script>
   </head>
   <body>
     <header>
@@ -14,6 +15,7 @@
         <a href="index.html">Home</a>
         <a href="cart.html">Cart</a>
         <a href="favourites.html">Favourites</a>
+        <a href="faq.html">Faq</a>
         <a href="contact.html" class="active">Contact Us</a>
       </nav>
       <a href="login.html" class="login-button">Login</a>
@@ -73,5 +75,22 @@
         <p>&copy; 2024 Electronics Shop</p>
       </div>
     </footer>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        // Retrieve current user from localStorage
+        const currentUser = JSON.parse(localStorage.getItem("currentUser"));
+
+        // Get form input elements
+        const nameInput = document.getElementById("name");
+        const emailInput = document.getElementById("email");
+
+        // If a user is logged in, populate the fields
+        if (currentUser) {
+          nameInput.value = currentUser.name || ""; // Set user's name in Full Name input
+          emailInput.value = currentUser.email || ""; // Set user's email in Email input
+        }
+      });
+    </script>
   </body>
 </html>

@@ -14,6 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
       name: "Combo Deal - Save $125.00",
       price: 427.97,
       image: "pictures/combo-deal.png",
+      category: "phone",
       description:
         "Intel Core i7 + Corsair Vengeance RAM + ASUS ROG Strix Z690",
     },
