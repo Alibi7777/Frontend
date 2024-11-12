@@ -7,7 +7,7 @@ body {
 }
 
 header {
-  background-color: #1e2a38;
+  background-color: #007acc;
   padding: 20px;
   display: flex;
   justify-content: space-between;
@@ -47,12 +47,12 @@ nav a:hover {
 }
 
 nav a.active {
-  border-bottom: 3px solid #ff9800;
-  color: #ff9800;
+  border-bottom: 3px solid #d08e32;
+  color: #d08e32;
 }
 
 .login-button {
-  background-color: #ff9800;
+  background-color: #115b8c;
   color: white;
   padding: 10px 20px;
   text-decoration: none;
@@ -62,24 +62,17 @@ nav a.active {
 }
 
 .login-button:hover {
-  background-color: #e68900;
+  background-color: #00253d;
+
+  /* background-color: #0056b3; */
 }
 
 /* Center the aside section aside(changed)*/
 .main-section {
+  margin-top: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 40%;
-  margin: 40px;
-}
-
-.highlight-box {
-  background-color: #007acc;
-  color: white;
-  padding: 30px;
-  max-width: 100%; /* Width similar to the reference image */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .category-links {
@@ -107,16 +100,53 @@ nav a.active {
   background-color: #0059b3;
 }
 
-.aside-image img {
-  max-width: 300px;
-  border-radius: 10px;
-  margin-left: 20px;
+.highlight-box {
+  max-height: 450px;
+  background-color: #007acc;
+  color: white;
+  padding: 30px;
+  max-width: 510px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  flex: 1;
+  border-radius: 5px 0 0 5px;
 }
+
+.aside-banner {
+  flex: 0 1 53.125%;
+  height: auto;
+  min-height: 448px;
+  border-radius: 0 5px 5px 0;
+}
+
+.aside-wrapper {
+  width: 100%;
+  height: 448px;
+  display: block;
+}
+
+.aside-image {
+  display: flex;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  padding: 24px;
+  background-color: #009ddf;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  align-items: center;
+  justify-content: center;
+}
+
+/* .aside-image img {
+  width: 620px;
+  height: 448px;
+} */
 .product-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 20px;
-  padding: 20px;
+  margin: 20px 0;
 }
 
 .product-card {
@@ -173,10 +203,6 @@ nav a.active {
   background-color: #0056b3;
 }
 
-/* Main content area */
-main {
-  padding: 100px;
-}
 .content {
   flex-grow: 1;
 }
@@ -318,10 +344,16 @@ main {
 }
 
 footer {
-  background-color: #000;
+  background-color: #007acc;
   color: #fff;
   padding: 40px 0;
   text-align: center;
+}
+
+.content-container {
+  max-width: 1207px;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .footer-content {
@@ -352,13 +384,13 @@ footer {
 }
 
 .footer-bottom {
-  border-top: 1px solid #333;
+  border-top: 1px solid #fff;
   padding-top: 20px;
   margin-top: 20px;
 }
 
 .footer-bottom p {
-  color: #777;
+  color: #ffff;
   font-size: 14px;
 }
 
@@ -370,7 +402,7 @@ footer {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: #fff;
   z-index: 1000;
   justify-content: center;
   align-items: center;
@@ -419,7 +451,7 @@ footer {
 
 .popup-content button {
   display: block;
-  background-color: #ff9800;
+  background-color: #003366;
   color: white;
   padding: 10px 20px;
   border: none;
@@ -431,7 +463,7 @@ footer {
 }
 
 .popup-content button:hover {
-  background-color: #e68900;
+  background-color: #0056b3;
 }
 
 body {
@@ -500,7 +532,7 @@ body.dark-mode .main-header {
 
 body.dark-mode .add-to-cart-button,
 body.dark-mode .add-to-favourites-button {
-  background-color: #ff9800;
+  background-color: #003366;
   color: #333;
 }
 
@@ -529,7 +561,7 @@ body.dark-mode .promo-banner {
     top: 60px; /* Adjust based on header height */
     left: 0;
     width: 92.5%;
-    background-color: #1e2a38;
+    background-color: #007acc;
     padding: 10px;
     z-index: 1000;
   }
@@ -545,7 +577,15 @@ body.dark-mode .promo-banner {
   }
 }
 
-/* Responsive Design */
+@media screen and (max-width: 1207px) {
+  .content-container {
+    max-width: 767px;
+  }
+  .aside-wrapper {
+    height: 476px;
+  }
+}
+
 @media (max-width: 992px) {
   main {
     flex-direction: column;
@@ -573,6 +613,22 @@ body.dark-mode .promo-banner {
     margin-top: 10px;
   }
 
+  .content-container {
+    max-width: 336px;
+  }
+
+  .highlight-box {
+    width: 510px;
+  }
+
+  .aside-wrapper {
+    width: 570px;
+  }
+
+  .main-section {
+    flex-direction: column;
+  }
+
   .product-image {
     max-width: 200px;
     min-width: 200px;
@@ -589,6 +645,14 @@ body.dark-mode .promo-banner {
 }
 
 @media (max-width: 576px) {
+  .highlight-box {
+    width: 310px;
+  }
+
+  .aside-banner {
+    display: none;
+  }
+
   .login-button {
     padding: 8px 16px;
     font-size: 12px;

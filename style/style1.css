@@ -7,7 +7,7 @@ body {
 }
 
 header {
-  background-color: #1e2a38;
+  background-color: #007acc;
   padding: 20px;
   display: flex;
   justify-content: space-between;
@@ -39,12 +39,12 @@ nav a:hover {
 }
 
 nav a.active {
-  border-bottom: 3px solid #ff9800;
-  color: #ff9800;
+  border-bottom: 3px solid #d08e32;
+  color: #d08e32;
 }
 
 .login-button {
-  background-color: #ff9800;
+  background-color: #003366;
   color: white;
   padding: 10px 20px;
   text-decoration: none;
@@ -54,11 +54,11 @@ nav a.active {
 }
 
 .login-button:hover {
-  background-color: #e68900;
+  background-color: #0056b3;
 }
 
 footer {
-  background-color: #000;
+  background-color: #007acc;
   color: #fff;
   padding: 40px 0;
   text-align: center;
@@ -92,12 +92,12 @@ footer {
 }
 
 .footer-bottom {
-  border-top: 1px solid #333;
+  border-top: 1px solid #fff;
   padding-top: 20px;
   margin-top: 20px;
 }
 
 .footer-bottom p {
-  color: #777;
+  color: #fff;
   font-size: 14px;
 }

@@ -6,7 +6,7 @@ body {
 }
 
 header {
-  background-color: #1e2a38;
+  background-color: #007acc;
   color: white;
   padding: 20px;
   text-align: center;
@@ -66,7 +66,7 @@ main {
 }
 
 .signup-form button {
-  background-color: #ff9800;
+  background-color: #003366;
   color: white;
   padding: 10px 20px;
   border: none;
@@ -77,11 +77,11 @@ main {
 }
 
 .signup-form button:hover {
-  background-color: #e68900;
+  background-color: #0056b3;
 }
 
 footer {
-  background-color: #1e2a38;
+  background-color: #007acc;
   color: white;
   text-align: center;
   padding: 10px;
