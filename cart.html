@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cart - Electronics Shop</title>
     <link rel="stylesheet" href="style/cart.css" />
+    <script src="js/displayCart.js" defer></script>
+    <script src="js/cart.js" defer></script>
   </head>
   <body>
     <header>
@@ -22,48 +24,6 @@
       <div class="container">
         <div class="cart-header">
           <h2>Your Cart</h2>
-        </div>
-
-        <div class="cart-product">
-          <div class="product-image">
-            <img src="pictures/combo-deal.png" alt="Combo Deal" />
-          </div>
-          <div class="product-details">
-            <h3>Combo Deal</h3>
-            <p>Color: Grey</p>
-            <p>Max Speed: 25 km/h</p>
-            <p>Range: 30 km</p>
-            <p>Brake System: Disc</p>
-            <p>Wheel Diameter: 8.5 inches</p>
-          </div>
-        </div>
-
-        <div class="checkout-section">
-          <p>Total: $427.97</p>
-          <button class="checkout-btn">Proceed to Checkout</button>
-        </div>
-      </div>
-
-      <div class="container">
-        <h2>Your Cart</h2>
-
-        <div class="cart-product">
-          <div class="product-image">
-            <img
-              src="pictures/desktop-computer-image.png"
-              alt="Desktop Computers Image"
-            />
-          </div>
-          <div class="product-details">
-            <h3>Desktop Computers - Save $30.00</h3>
-            <p>ABS Gaming PC + Acer Monitor + Razer Headset</p>
-            <p>Price: $2,489.97</p>
-          </div>
-        </div>
-
-        <div class="checkout-section">
-          <p>Total: $2,489.97</p>
-          <button class="checkout-btn">Proceed to Checkout</button>
         </div>
       </div>
     </main>
@@ -93,11 +53,46 @@
         <p>&copy; 2024 Electronics Shop</p>
       </div>
     </footer>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const loggedInUser = JSON.parse(localStorage.getItem("loggedInUser"));
+        const loginButton = document.querySelector(".login-button");
 
-    <!-- Audio element for the purchase sound -->
-    <audio id="purchaseSound" src="sound/money.wav"></audio>
+        if (loggedInUser && loginButton) {
+          const userNameDisplay = document.createElement("span");
+          userNameDisplay.textContent = loggedInUser.name;
+          userNameDisplay.classList.add("user-name");
 
-    <!-- Link to the external JavaScript file -->
-    <script src="js/cart.js" defer></script>
+          loginButton.parentNode.replaceChild(userNameDisplay, loginButton);
+        }
+
+        const products = [
+          {
+            id: "1",
+            name: "Combo Deal - Save $125.00",
+            price: 427.97,
+            image: "pictures/combo-deal.png",
+            description:
+              "Intel Core i7 + Corsair Vengeance RAM + ASUS ROG Strix Z690",
+          },
+          {
+            id: "2",
+            name: "Desktop Computers - Save $30.00",
+            price: 2489.97,
+            image: "pictures/desktop-computer-image.png",
+            description: "ABS Gaming PC + Acer Monitor + Razer Headset",
+          },
+          {
+            id: "3",
+            name: "Google Pixel 9",
+            price: 579,
+            image: "pictures/phone1.png",
+            description: "Google Pixel 9 - Save $400",
+          },
+        ];
+
+        localStorage.setItem("products", JSON.stringify(products));
+      });
+    </script>
   </body>
 </html>

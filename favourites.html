@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Favourites - Electronics Shop</title>
     <link rel="stylesheet" href="style/favourites.css" />
+    <script src="js/favourites.js" defer></script>
+    <script src="js/displayFavourites.js" defer></script>
   </head>
   <body>
     <header>
@@ -21,48 +23,8 @@
     <main>
       <section class="favourites-list">
         <h2>Your Favourite Products</h2>
-
-        <!-- Favourite Product 1 -->
-        <div class="product-card">
-          <div class="product-image">
-            <img src="pictures/laptop.png" alt="Product 1" />
-            <figcaption class="figcaption">Laptop</figcaption>
-          </div>
-          <div class="product-details">
-            <h3>Gaming Laptop - High Performance</h3>
-            <p>Price: $1,499.00</p>
-            <button class="add-to-cart">Add to Cart</button>
-            <button class="remove-favourite">Remove from Favourites</button>
-          </div>
-        </div>
-
-        <!-- Favourite Product 2 -->
-        <div class="product-card">
-          <div class="product-image">
-            <img src="pictures/phone.png" alt="Product 2" />
-            <figcaption class="figcaption">Phone</figcaption>
-          </div>
-          <div class="product-details">
-            <h3>Smartphone - Latest Model</h3>
-            <p>Price: $799.00</p>
-            <button class="add-to-cart">Add to Cart</button>
-            <button class="remove-favourite">Remove from Favourites</button>
-          </div>
-        </div>
-
-        <!-- Favourite Product 3 -->
-        <div class="product-card">
-          <div class="product-image">
-            <img src="pictures/tv.png" alt="Product 3" />
-            <figcaption class="figcaption">TV figure</figcaption>
-          </div>
-          <div class="product-details">
-            <h3>4K Smart TV</h3>
-            <p>Price: $1,299.00</p>
-            <button class="add-to-cart">Add to Cart</button>
-            <button class="remove-favourite">Remove from Favourites</button>
-          </div>
-        </div>
+        <!-- Products will be dynamically inserted here -->
+        <div id="favourites-container"></div>
       </section>
     </main>
 

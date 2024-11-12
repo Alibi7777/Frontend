@@ -67,3 +67,19 @@ document.addEventListener("DOMContentLoaded", function () {
     return emailPattern.test(email);
   }
 });
+// After registration
+if (isValid) {
+  const user = {
+    name: nameInput.value.trim(),
+    email: emailInput.value.trim(),
+    password: passwordInput.value,
+  };
+
+  let users = JSON.parse(localStorage.getItem("users")) || [];
+  users.push(user);
+  localStorage.setItem("users", JSON.stringify(users));
+  localStorage.setItem("currentUser", JSON.stringify(user)); // Set current user
+
+  alert("Registration successful!");
+  window.location.href = "index.html";
+}

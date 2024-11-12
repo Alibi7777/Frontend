@@ -9,8 +9,12 @@
     <script defer src="js/background-color.js"></script>
     <script defer src="js/date-time.js"></script>
     <script defer src="js/theme.js"></script>
-    <script defer src="js/filter.js"></script>
     <script defer src="js/menu-toggle.js"></script>
+    <script defer src="js/auth.js"></script>
+    <script defer src="js/cart.js"></script>
+    <script defer src="displayCart.js"></script>
+    <script defer src="js/favourites.js" defer></script>
+    <script defer src="js/displayFavourites.js" defer></script>
   </head>
   <body>
     <header>
@@ -23,11 +27,7 @@
         <a href="contact.html">Contact Us</a>
       </nav>
       <button id="hamburger-menu" class="hamburger">&#9776;</button>
-      <select id="filter-options">
-        <option value="all">All</option>
-        <option value="category1">Category 1</option>
-        <option value="category2">Category 2</option>
-      </select>
+
       <button
         id="theme-toggle"
         style="background-color: transparent; border: none"
@@ -48,92 +48,96 @@
       </div> -->
     </header>
 
-    <main>
-      <aside class="category-menu">
-        <ul>
-          <li>Phone</li>
-          <li>Computer Systems</li>
-          <li>Computer Peripherals</li>
-          <li>TV</li>
-          <li>VR</li>
-        </ul>
-      </aside>
-
-      <div>
-        <div class="featured-products">
-          <div class="promo-banner" style="background-color: orange">
-            <h2>Performance Boost - Save Up to 55%</h2>
-            <blockquote>
-              "An unbeatable deal! Boost your PC's performance at an incredible
-              discount of up to 55%. Don't miss this limited-time offer."
-            </blockquote>
+    <main class="content-container">
+      <section class="main-section">
+        <div class="highlight-box">
+          <h2>Best prices on phones and accessories</h2>
+          <p>Find the best deal for you</p>
+          <div class="category-links">
+            <a href="#" class="category-item active"
+              >Phones <span class="arrow">→</span></a
+            >
+            <a href="#" class="category-item"
+              >Tablets <span class="arrow">→</span></a
+            >
+            <a href="#" class="category-item"
+              >Earbuds <span class="arrow">→</span></a
+            >
+            <a href="#" class="category-item"
+              >Smartwatches <span class="arrow">→</span></a
+            >
+            <a href="#" class="category-item"
+              >Accessories <span class="arrow">→</span></a
+            >
+          </div>
+        </div>
+        <div class="aside-image">
+          <img src="pictures/image.png" alt="Smiling people with phones" />
+        </div>
+      </section>
+      <section class="product-grid" id="products_list">
+        <!-- <div class="product-card">
+          <img
+            src="pictures/combo-deal.png"
+            alt="Combo Deal Image"
+            class="product-image"
+          />
+          <div class="product-details">
+            <h4>Combo Deal</h4>
+            <p class="product-price">$427.97</p>
+            <button class="add-to-cart-btn" data-product-id="1">
+              Add to Cart
+            </button>
+            <button class="add-to-favourites-btn" data-product-id="1">
+              Add to Favourites
+            </button>
           </div>
         </div>
 
         <div class="product-card">
-          <div class="product-image">
-            <img src="pictures/combo-deal.png" alt="Combo Deal Image" />
-          </div>
+          <img
+            src="pictures/desktop-computer-image.png"
+            alt="Desktop Computers Image"
+            class="product-image"
+          />
           <div class="product-details">
-            <h4 class="main-header">Combo Deal - Save $125.00</h4>
-            <p class="main-header">
-              Intel Core i7 + Corsair Vengeance RAM + ASUS ROG Strix Z690
-            </p>
-            <p class="main-header">Price: $427.97</p>
-            <a href="cart.html" class="add-to-cart-button">Add to Cart</a>
-            <br /><br />
-            <a href="favourites.html" class="add-to-favourites-button"
-              >Add to favourites</a
-            >
+            <h4>Desktop Computers</h4>
+            <p class="product-price">$2,489.97</p>
+            <button class="add-to-cart-btn" data-product-id="2">
+              Add to Cart
+            </button>
+            <button class="add-to-favourites-btn" data-product-id="2">
+              Add to Favourites
+            </button>
           </div>
         </div>
 
         <div class="product-card">
-          <div class="product-image">
-            <img
-              src="pictures/desktop-computer-image.png"
-              alt="Desktop Computers Image"
-            />
-          </div>
+          <img
+            src="pictures/phone1.png"
+            alt="Google Pixel 9"
+            class="product-image"
+          />
           <div class="product-details">
-            <h4 class="main-header">Desktop Computers - Save $30.00</h4>
-            <p class="main-header">
-              ABS Gaming PC + Acer Monitor + Razer Headset
-            </p>
-            <p class="main-header">Price: $2,489.97</p>
-            <a href="cart.html" class="add-to-cart-button">Add to Cart</a>
-            <br /><br />
-            <a href="favourites.html" class="add-to-favourites-button"
-              >Add to favourites</a
-            >
+            <h4>Google Pixel 9</h4>
+            <p class="product-price">$579.00</p>
+            <button class="add-to-cart-btn" data-product-id="3">
+              Add to Cart
+            </button>
+            <button class="add-to-favourites-btn" data-product-id="3">
+              Add to Favourites
+            </button>
           </div>
-        </div>
+        </div> -->
+      </section>
 
-        <div class="product-card">
-          <div class="product-image">
-            <img src="pictures/phone1.png" alt="Google Pixel 9" />
-          </div>
-          <div class="product-details">
-            <h4 class="main-header">Google Pixel 9</h4>
-            <h3 class="main-header">
-              Price: <strong>$579</strong> <del>$979</del>
-            </h3>
-            <a href="cart.html" class="add-to-cart-button">Add to Cart</a>
-            <br /><br />
-            <a href="favourites.html" class="add-to-favourites-button"
-              >Add to favourites</a
-            >
-          </div>
-        </div>
+      <!-- Background Color Change Button -->
+      <div class="background-color-section">
+        <button id="color-button">Change Background Color</button>
+      </div>
 
-        <!-- Background Color Change Button -->
-        <div class="background-color-section">
-          <button id="color-button">Change Background Color</button>
-        </div>
-
-        <div class="promo-banner" style="background-color: orange">
-          <h2>ASUS NUC Configurator - Check it Now</h2>
-        </div>
+      <div class="promo-banner" style="background-color: orange">
+        <h2>ASUS NUC Configurator - Check it Now</h2>
       </div>
     </main>
 
@@ -182,5 +186,43 @@
         </form>
       </div>
     </div>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const loggedInUser = JSON.parse(localStorage.getItem("loggedInUser"));
+        const loginButton = document.querySelector(".login-button");
+
+        if (loggedInUser && loginButton) {
+          // Replace login button with the user's name
+          const userNameDisplay = document.createElement("span");
+          userNameDisplay.textContent = loggedInUser.name;
+          userNameDisplay.classList.add("user-name");
+
+          // Replace the login button with the user's name
+          loginButton.parentNode.replaceChild(userNameDisplay, loginButton);
+        }
+
+        const productContainer = document.getElementById("products_list");
+        const products = JSON.parse(localStorage.getItem("products") || []);
+
+        products.forEach((item, index) => {
+          const productHTML = `
+      <div class="product-card" data-index="${index}">
+        <img src="${item.image}" alt="${item.name}" class="product-image" />
+        <div class="product-details">
+          <h4>${item.name}</h4>
+          <p>Price: $${item.price.toFixed(2)}</p>
+          <button class="add-to-cart-btn" data-product-id="${index + 1}">
+              Add to Cart
+          </button>
+          <button class="add-to-favourites-btn" data-product-id="${index + 1}">
+              Add to Favourites
+          </button>
+        </div>
+      </div>
+    `;
+          productContainer.insertAdjacentHTML("beforeend", productHTML);
+        });
+      });
+    </script>
   </body>
 </html>
