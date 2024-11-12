@@ -11,7 +11,7 @@ main {
 }
 
 header {
-  background-color: #1e2a38;
+  background-color: #007acc;
   padding: 20px;
   display: flex;
   justify-content: space-between;
@@ -90,7 +90,7 @@ nav a.active {
   padding: 15px;
   color: white;
   text-decoration: none;
-  background-color: #003366;
+  background-color: #007acc;
   border-radius: 5px;
   margin-top: 10px;
   font-weight: bold;
@@ -161,6 +161,25 @@ nav a.active {
   border-radius: 5px;
 }
 
+.dark-mode .product-card {
+  background-color: rgb(9, 9, 90);
+}
+
+.dark-mode .product-card .product-details h4,
+.dark-mode .product-card .product-details p {
+  color: #fff;
+}
+
+.test123 {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  min-height: 180px;
+  max-height: 180px;
+}
+
 .product-card {
   display: flex;
   flex-direction: column;
@@ -168,7 +187,6 @@ nav a.active {
   background-color: #fff;
   border-radius: 10px;
   border: 1px solid #ccc;
-  padding: 15px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
@@ -465,7 +483,7 @@ footer {
 
 .popup-content button {
   display: block;
-  background-color: #003366;
+  background-color: #007acc;
   color: white;
   padding: 10px 20px;
   border: none;
@@ -522,7 +540,7 @@ body {
   cursor: pointer;
 }
 body.dark-mode {
-  background-color: #333;
+  background-color: #121943;
   color: #fff;
 }
 
@@ -546,7 +564,7 @@ body.dark-mode .main-header {
 
 body.dark-mode .add-to-cart-button,
 body.dark-mode .add-to-favourites-button {
-  background-color: #003366;
+  background-color: #007acc;
   color: #333;
 }
 
