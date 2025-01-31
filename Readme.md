@@ -14,7 +14,7 @@ The project is a website for an Electronics Shop, where users can browse frequen
    - Users can select their preferred language (English, Russian, or Kazakh) using a language dropdown. The website content updates accordingly based on the user's language selection.
    - The language selection is managed through a switch statement in JavaScript, which updates the text content of various elements on the page according to the selected language.
 
-3. Interactive Navigation:
+3. Interactive Naviga
 
    - A header with navigation links allows users to easily access different sections of the website, such as Home, Cart, Favourites, FAQ, and Contact Us.
    - The active page is visually highlighted to help users identify their current location within the website.
